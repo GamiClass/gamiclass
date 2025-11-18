@@ -1,14 +1,24 @@
-# Turborepo starter
+# GamiClass 🎮
 
-This Turborepo starter is maintained by the Turborepo core team.
+A gamification platform for classroom management that turns learning into an engaging RPG experience.
 
-## Using this example
+## Features
 
-Run the following command:
+### ⚔️ The Power Ladder (Thang Sức Mạnh)
 
-```sh
-npx create-turbo@latest
-```
+A comprehensive skill tree system where students can purchase abilities using points:
+
+- **Basic Tier Skills** (20-100 points)
+  - 🎭 Biến Hình (Change Avatar) - Customize your appearance
+  - 🎁 Hộp Bí Ẩn (Mystery Box) - Gacha mechanic with random rewards
+  - 🐾 Triệu Hồi Pet (Summon Pet) - Get a companion with +1.5% point buff
+
+- **PvP Tier Skills** (200+ points)
+  - 🕵️ Đạo Chích (Steal Points) - Competitive player interactions
+
+Points serve dual purposes as both currency and HP (health points), creating strategic gameplay.
+
+See [apps/web/SKILL_SYSTEM.md](apps/web/SKILL_SYSTEM.md) for detailed documentation.
 
 ## What's inside?
 
@@ -17,7 +27,7 @@ This Turborepo includes the following packages/apps:
 ### Apps and Packages
 
 - `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
+- `web`: the main [Next.js](https://nextjs.org/) GamiClass application
 - `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
 - `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo

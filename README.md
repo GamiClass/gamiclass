@@ -20,6 +20,17 @@ Points serve dual purposes as both currency and HP (health points), creating str
 
 See [apps/web/SKILL_SYSTEM.md](apps/web/SKILL_SYSTEM.md) for detailed documentation.
 
+### 🏙️ City System (Hệ Thống Thành Phố)
+
+An interactive peaceful city where students can explore and move their characters:
+
+- **Exploration** - Navigate a 12x10 grid-based city with buildings, trees, and a central fountain
+- **Movement Controls** - Use keyboard (Arrow keys/WASD) or on-screen buttons to move
+- **Collision Detection** - Walk on paths and grass, but blocked by buildings and trees
+- **Character Integration** - Student avatars appear in the city with real-time position tracking
+
+See [apps/web/CITY_SYSTEM.md](apps/web/CITY_SYSTEM.md) for detailed documentation.
+
 ## What's inside?
 
 This Turborepo includes the following packages/apps:

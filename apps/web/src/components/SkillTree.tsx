@@ -9,9 +9,10 @@ import { purchaseSkill } from '@/utils/skillMechanics';
 interface SkillTreeProps {
   student: Student;
   onStudentUpdate: (student: Student) => void;
+  onNavigateToCity?: () => void;
 }
 
-export function SkillTree({ student, onStudentUpdate }: SkillTreeProps) {
+export function SkillTree({ student, onStudentUpdate, onNavigateToCity }: SkillTreeProps) {
   const [message, setMessage] = useState<string>('');
   const [messageType, setMessageType] = useState<'success' | 'error'>('success');
 
@@ -50,13 +51,25 @@ export function SkillTree({ student, onStudentUpdate }: SkillTreeProps) {
   return (
     <div className="w-full max-w-6xl mx-auto p-4">
       {/* Header */}
-      <div className="mb-8 text-center">
-        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
-          ⚔️ The Power Ladder
-        </h1>
-        <p className="text-lg text-gray-600 dark:text-gray-400">
-          Thang Sức Mạnh - Hệ Thống Kỹ Năng &amp; Phần Thưởng
-        </p>
+      <div className="mb-8">
+        <div className="flex items-center justify-between mb-4">
+          <div className="text-center flex-1">
+            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
+              ⚔️ The Power Ladder
+            </h1>
+            <p className="text-lg text-gray-600 dark:text-gray-400">
+              Thang Sức Mạnh - Hệ Thống Kỹ Năng &amp; Phần Thưởng
+            </p>
+          </div>
+          {onNavigateToCity && (
+            <button
+              onClick={onNavigateToCity}
+              className="px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg font-semibold shadow-lg transition-colors"
+            >
+              🏙️ Thành Phố
+            </button>
+          )}
+        </div>
       </div>
 
       {/* Student Info */}

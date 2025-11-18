@@ -1,7 +1,6 @@
 {
   "name": "gamiclass",
   "private": true,
-  "packageManager": "pnpm@10.22.0",
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
@@ -14,6 +13,7 @@
     "turbo": "^2.6.1",
     "typescript": "5.9.2"
   },
+  "packageManager": "pnpm@10.22.0",
   "engines": {
     "node": ">=18"
   }

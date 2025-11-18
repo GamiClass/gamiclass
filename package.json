@@ -1,6 +1,7 @@
 {
   "name": "gamiclass",
   "private": true,
+  "packageManager": "pnpm@10.22.0",
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",

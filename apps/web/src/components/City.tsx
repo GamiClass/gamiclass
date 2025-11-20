@@ -5,6 +5,7 @@ import type { Student } from '@/types/skills';
 import type { Position, Direction } from '@/types/city';
 import { DEFAULT_CITY_MAP, CITY_TILES, getDefaultStartPosition } from '@/data/city';
 import { moveCharacter } from '@/utils/cityMechanics';
+import { loadCharacterPosition, saveCharacterPosition } from '@/utils/storage';
 import { Button } from './ui/button';
 
 interface CityProps {
@@ -13,9 +14,16 @@ interface CityProps {
 }
 
 export function City({ student, onNavigateToSkills }: CityProps) {
-  const [characterPosition, setCharacterPosition] = useState<Position>(
-    getDefaultStartPosition()
-  );
+  // Initialize character position with lazy initialization from localStorage
+  const [characterPosition, setCharacterPosition] = useState<Position>(() => {
+    const savedPosition = loadCharacterPosition();
+    return savedPosition || getDefaultStartPosition();
+  });
+
+  // Save character position to localStorage whenever it changes
+  useEffect(() => {
+    saveCharacterPosition(characterPosition);
+  }, [characterPosition]);
 
   // Handle keyboard movement
   useEffect(() => {

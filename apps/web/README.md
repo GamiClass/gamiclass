@@ -1,5 +1,13 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Features
+
+- **The Power Ladder**: Skill tree system with purchasable abilities
+- **City System**: Interactive city exploration with character movement
+- **Data Persistence**: All progress is automatically saved using localStorage
+
+See [PERSISTENCE.md](PERSISTENCE.md) for details on how data is stored and persisted.
+
 ## Getting Started
 
 First, run the development server:
